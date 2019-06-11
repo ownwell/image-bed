@@ -1,8 +1,9 @@
 from PIL import ImageGrab, Image 
 import time
 import subprocess
+import os
 
-print os.getcwd()
+print(os.getcwd())
 
  
 imgUrl = ""
