@@ -1,9 +1,10 @@
 from PIL import ImageGrab, Image 
 import time
 import subprocess
+import sys
 import os
 
-print(os.getcwd())
+print(os.chdir(sys.path[0]))
 
  
 imgUrl = ""
