@@ -4,7 +4,7 @@ import subprocess
 import sys
 import os
 
-print(os.chdir(sys.path[0]))
+print(os.path.abspath(__file__))
 
  
 imgUrl = ""
