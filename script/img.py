@@ -49,8 +49,7 @@ def saveClipboardImg():
     pass
 
 def pullToGithub():
-    cmd = '''
-    cd ''' + script_path + ''' ;git add .;git commit -m "blog_img";git push origin master
+    cmd = '''cd ''' + script_path + ''' ;git add .;git commit -m "blog_img";git push origin master
     '''
     subprocess.call(cmd, shell=True)
 
