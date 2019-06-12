@@ -41,7 +41,7 @@ def saveClipboardImg():
         filename =  str(now) + ".jpg"
         imgUrl = "https://raw.githubusercontent.com/ownwell/image-bed/master/img/"+filename
         print(imgUrl)
-        im.save(path  + "img"+os.path.sep +  filename, im.format)
+        im.save(path  +os.path.sep + "img"+os.path.sep +  filename, im.format)
         width, height = im.size
         pix = im.load()
     
