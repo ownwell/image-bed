@@ -21,8 +21,7 @@ script_path = father_path(current_path)
 
 path = script_path
 
-print("path = %s" % path)
-def timestamp_to_date(time_stamp, format_string="%Y-%m-%d-%H-%M-%S"):
+def timestamp_to_date(time_stamp, format_string="%Y_%m_%d_%H_%M_%S"):
     time_array = time.localtime(time_stamp)
     str_date = time.strftime(format_string, time_array)
     return str_date
