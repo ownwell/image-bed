@@ -4,11 +4,22 @@ import subprocess
 import sys
 import os
 
-print(os.path.abspath(__file__))
+
+# father_path=os.path.abspath(os.path.dirname(os.path.abspath(__file__))+os.path.sep+".")
+# print(father_path)
+
+def father_path(path):
+
+    father_path=os.path.abspath(os.path.dirname(path)+os.path.sep+".")
+    return father_path
 
  
 imgUrl = ""
 path = "/Users/lixingyun/work/private/image/img/"
+
+current_path = os.path.dirname(os.path.abspath(__file__))
+script_path = father_path(current_path)
+
 def timestamp_to_date(time_stamp, format_string="%Y-%m-%d-%H-%M-%S"):
     time_array = time.localtime(time_stamp)
     str_date = time.strftime(format_string, time_array)
@@ -38,11 +49,10 @@ def saveClipboardImg():
 
 def pullToGithub():
     cmd = '''
-    cd ''' + path + ''' ;git add .;git commit -m "blog_img";git push origin master
+    cd ''' + script_path + ''' ;git add .;git commit -m "blog_img";git push origin master
     '''
     subprocess.call(cmd, shell=True)
 
-      
 
 saveClipboardImg()
 pullToGithub()
