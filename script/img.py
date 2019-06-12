@@ -56,4 +56,6 @@ def pullToGithub():
 
 saveClipboardImg()
 pullToGithub()
+print()
+print()
 print("![](%s)"% imgUrl)
