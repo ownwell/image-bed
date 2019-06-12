@@ -18,8 +18,8 @@ imgUrl = ""
 
 current_path = os.path.dirname(os.path.abspath(__file__))
 script_path = father_path(current_path)
-print(script_path)
-path = father_path(script_path)
+
+path = script_path
 
 def timestamp_to_date(time_stamp, format_string="%Y-%m-%d-%H-%M-%S"):
     time_array = time.localtime(time_stamp)
