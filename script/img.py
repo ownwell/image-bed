@@ -40,6 +40,7 @@ def saveClipboardImg():
         filename =  str(now) + ".jpg"
         imgUrl = "https://raw.githubusercontent.com/ownwell/image-bed/master/img/"+filename
         print(imgUrl)
+        imgDir = path +'/img01'
         im.save(path  +os.path.sep + "img"+os.path.sep +  filename, im.format)
         width, height = im.size
         pix = im.load()
@@ -49,7 +50,7 @@ def saveClipboardImg():
     pass
 
 def pullToGithub():
-    cmd = '''cd ''' + script_path + ''' ;git add .;git commit -m "blog_img";git push origin master
+    cmd = '''cd ''' + script_path + '''/img01 ;git add .;git commit -m "blog_img";git push origin master
     '''
     subprocess.call(cmd, shell=True)
 
